@@ -1,0 +1,12 @@
+.navbar {
+  height: 80px;
+  width: 100vw;
+  background-color: black;
+}
+
+.navbar img {
+  height: auto;
+  width: 20%;
+  position: absolute;
+  margin: auto;
+}

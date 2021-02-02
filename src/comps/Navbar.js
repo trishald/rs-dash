@@ -1,24 +1,26 @@
-import React from 'react'
+import React from "react";
+import "../styles/navbar.css";
+import { MenuItems } from "./MenuItems";
 
 function Navbar() {
   return (
-    <div>
-    <nav>
-      <input type="checkbox" id="check"/>
-      <label for="check" class="checkbtn">
-        <i className="fas fa-bars"></i>
-      </label>
-      <label className="logo">DesignX</label>
+    <nav className="navbar">
+      <h1 className="navbar-logo">Rentashoot</h1>
+      <div className="menu-icon"></div>
+
       <ul>
-        <li><a className="active" href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Feedback</a></li>
+        {MenuItems.map((items, index) => {
+          return (
+            <li key={index}>
+              <a className={items.cname} href={items.url}>
+                {items.title}
+              </a>
+            </li>
+          );
+        })}
       </ul>
-    </nav>  
-    </div>
-  )
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
